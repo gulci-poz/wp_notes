@@ -1,0 +1,9 @@
+VBoxManage startvm opo-intranet --type headless
+VBoxManage controlvm opo-intranet acpipowerbutton
+
+VBoxManage list vms
+VBoxManage list vms | sed "s/\"\(.*\)\".*/\1/"
+
+VBoxManage list runningvms
+VBoxManage list vms -l | grep -e ^Name: -e ^State | sed s/\ \ //g | cut -d: -f2-
+VBoxManage list vms -l | grep -e ^Name: -e ^State  | sed "s/Name:[ ]*\(.*\)/\1 \//;s/State:[\ ]*//" | paste -d " " - -
