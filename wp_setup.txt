@@ -29,8 +29,8 @@ GRANT ALL PRIVILEGES ON opo_intranet_wp.* TO 'gulci'@'other_computer';
 FLUSH PRIVILEGES;
 
 CREATE USER 'gulci'@'%' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON opo_intranet_wp.* TO 'gulci'@’%’;
+GRANT ALL PRIVILEGES ON opo_intranet_wp.* TO 'gulci'@'%';
 
 wp-config.php
-define(‘FS_METHOD’, ‘direct’);
+define('FS_METHOD', 'direct');
 +skrypt ze zmianą uprawnień wordpress_fix.sh
